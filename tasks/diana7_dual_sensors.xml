@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="diana7_dual">
+  <compiler angle="radian" />
+  <asset>
+    <mesh name="base_c" file="../diana7_description/base_c.stl" />
+    <mesh name="link_1_c" file="../diana7_description/link_1_c.stl" />
+    <mesh name="link_2_c" file="../diana7_description/link_2_c.stl" />
+    <mesh name="link_3_c" file="../diana7_description/link_3_c.stl" />
+    <mesh name="link_4_c" file="../diana7_description/link_4_c.stl" />
+    <mesh name="link_5_c" file="../diana7_description/link_5_c.stl" />
+    <mesh name="link_6_c" file="../diana7_description/link_6_c.stl" />
+    <mesh name="link_7_c" file="../diana7_description/link_7_c.stl" />
+    <mesh name="base_v" file="../diana7_description/base_v.obj" />
+    <mesh name="link_1_v" file="../diana7_description/link_1_v.obj" />
+    <mesh name="link_2_v" file="../diana7_description/link_2_v.obj" />
+    <mesh name="link_3_v" file="../diana7_description/link_3_v.obj" />
+    <mesh name="link_4_v" file="../diana7_description/link_4_v.obj" />
+    <mesh name="link_5_v" file="../diana7_description/link_5_v.obj" />
+    <mesh name="link_6_v" file="../diana7_description/link_6_v.obj" />
+    <mesh name="link_7_v" file="../diana7_description/link_7_v.obj" />
+  </asset>
+  <worldbody>
+    <geom pos="0.025 0.19 1.25" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.796078 0.823529 0.937255 1" mesh="base_c" />
+    <geom type="mesh" mesh="base_v" group="2" contype="0" conaffinity="0" pos="0.025 0.19 1.25" quat="0.707105 -0.707108 0 0" />
+    <geom pos="0.025 -0.19 1.25" quat="0.707105 0.707108 0 0" type="mesh" rgba="0.796078 0.823529 0.937255 1" mesh="base_c" />
+    <geom type="mesh" mesh="base_v" group="2" contype="0" conaffinity="0" pos="0.025 -0.19 1.25" quat="0.707105 0.707108 0 0" />
+    <body name="L_link_1" pos="0.025 0.4756 1.25" quat="-0.707108 -0.707105 0 0">
+      <inertial pos="5.52341e-05 -0.0254878 0.0355441" quat="0.691193 -0.148511 0.148051 0.691576" mass="1.09026" diaginertia="0.00692617 0.00585031 0.00412411" />
+      <joint name="L_joint_1" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-235 235" damping="0.2" armature="0.1" />
+      <geom quat="2.05103e-10 1 0 0" type="mesh" rgba="0.796078 0.823529 0.937255 1" mesh="link_1_c" />
+      <geom type="mesh" mesh="link_1_v" group="2" contype="0" conaffinity="0" quat="2.05103e-10 1 0 0" />
+      <body name="L_link_2" quat="0.707107 0.707107 0 0">
+        <inertial pos="-3.62725e-06 -0.0292741 -0.0412808" quat="0.617151 0.34497 -0.344838 0.61742" mass="1.09515" diaginertia="0.00672265 0.00575818 0.00369374" />
+        <joint name="L_joint_2" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" actuatorfrcrange="-235 235" damping="0.2" armature="0.1" />
+        <geom type="mesh" rgba="0.980392 0.980392 0.470588 1" mesh="link_2_c" />
+        <geom type="mesh" mesh="link_2_v" group="2" contype="0" conaffinity="0" />
+        <body name="L_link_3" pos="0 -0.4586 -2.24558e-12" quat="0.707107 -0.707107 0 0">
+          <inertial pos="0.0114318 -0.0101708 0.151317" quat="0.531181 0.0446203 0.0932258 0.840931" mass="2.01687" diaginertia="0.0380442 0.0369189 0.00782814" />
+          <joint name="L_joint_3" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-111 111" damping="0.2" armature="0.1" />
+          <geom pos="0 0 0" quat="2.05103e-10 1 0 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_3_c" />
+          <geom type="mesh" mesh="link_3_v" group="2" contype="0" conaffinity="0" quat="2.05103e-10 1 0 0" />
+          <body name="L_link_4" pos="0.065 0 0" quat="0.707107 0.707107 0 0">
+            <inertial pos="-0.0240716 -0.0235632 -0.0366858" quat="0.759875 0.103862 -0.465331 0.441894" mass="0.849743" diaginertia="0.00419973 0.00389504 0.00186162" />
+            <joint name="L_joint_4" pos="0 0 0" axis="0 0 1" range="0 3.05" actuatorfrcrange="-111 111" damping="0.2" armature="0.1" />
+            <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_4_c" />
+            <geom type="mesh" mesh="link_4_v" group="2" contype="0" conaffinity="0" />
+            <body name="L_link_5" pos="-0.0528 -0.4554 -2.22991e-12" quat="0.707107 -0.707107 0 0">
+              <inertial pos="-0.00867148 0.03835 0.188626" quat="0.446674 0.0377876 -0.128743 0.884579" mass="1.2058" diaginertia="0.0219771 0.0218397 0.00233919" />
+              <joint name="L_joint_5" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+              <geom pos="0 0 -0.02162" quat="2.05103e-10 1 0 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_5_c" />
+              <geom type="mesh" mesh="link_5_v" group="2" contype="0" conaffinity="0" pos="0 0 -0.02162" quat="2.05103e-10 1 0 0" />
+              <body name="L_link_6" pos="-0.0122 0 0" quat="3.6087e-12 -3.60861e-12 -0.707107 -0.707107">
+                <inertial pos="0.0458972 0.0084858 -0.00782578" quat="0.0424626 0.6118 0.170922 0.771157" mass="0.847158" diaginertia="0.00444053 0.00440141 0.00272972" />
+                <joint name="L_joint_6" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+                <geom pos="0 0 0" quat="0 0 1 2.05103e-10" type="mesh" rgba="0.980392 0.980392 0.470588 1" mesh="link_6_c" />
+                <geom type="mesh" mesh="link_6_v" group="2" contype="0" conaffinity="0" quat="0 0 1 2.05103e-10" />
+                <body name="L_link_7" pos="0.087 -0.1169 0" quat="0.707107 -0.707107 0 0">
+                  <inertial pos="0.00117005 5.03192e-06 0.0151382" quat="0.499962 0.501129 -0.498877 0.500029" mass="0.233956" diaginertia="0.000240243 0.000142027 0.000134422" />
+                  <joint name="L_joint_7" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+                  <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_7_c" />
+                    <site name="L_tool_mount" pos="0 0 0.045" size="0.012" rgba="0.95 0.25 0.15 1"/>
+                    <camera name="L_hand_camera" pos="0 0 0.075" xyaxes="-0.24 0 -0.97 0 1 0" fovy="70"/>
+                    <site name="R_tool_mount" pos="0 0 0.045" size="0.012" rgba="0.95 0.25 0.15 1"/>
+                    <camera name="R_hand_camera" pos="0 0 0.075" xyaxes="-0.24 0 -0.97 0 1 0" fovy="70"/>
+                  <geom type="mesh" mesh="link_7_v" group="2" contype="0" conaffinity="0" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="R_link_1" pos="0.025 -0.4756 1.25" quat="0.707108 -0.707105 0 0">
+      <inertial pos="5.52341e-05 -0.0254878 0.0355441" quat="0.691193 -0.148511 0.148051 0.691576" mass="1.09026" diaginertia="0.00692617 0.00585031 0.00412411" />
+      <joint name="R_joint_1" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-235 235" damping="0.2" armature="0.1" />
+      <geom quat="2.05103e-10 1 0 0" type="mesh" rgba="0.796078 0.823529 0.937255 1" mesh="link_1_c" />
+      <geom type="mesh" mesh="link_1_v" group="2" contype="0" conaffinity="0" quat="2.05103e-10 1 0 0" />
+      <body name="R_link_2" quat="0.707107 0.707107 0 0">
+        <inertial pos="-3.62725e-06 -0.0292741 -0.0412808" quat="0.617151 0.34497 -0.344838 0.61742" mass="1.09515" diaginertia="0.00672265 0.00575818 0.00369374" />
+        <joint name="R_joint_2" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" actuatorfrcrange="-235 235" damping="0.2" armature="0.1" />
+        <geom type="mesh" rgba="0.980392 0.980392 0.470588 1" mesh="link_2_c" />
+        <geom type="mesh" mesh="link_2_v" group="2" contype="0" conaffinity="0" />
+        <body name="R_link_3" pos="0 -0.4586 -2.24558e-12" quat="0.707107 -0.707107 0 0">
+          <inertial pos="0.0114318 -0.0101708 0.151317" quat="0.531181 0.0446203 0.0932258 0.840931" mass="2.01687" diaginertia="0.0380442 0.0369189 0.00782814" />
+          <joint name="R_joint_3" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-111 111" damping="0.2" armature="0.1" />
+          <geom pos="0 0 0" quat="2.05103e-10 1 0 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_3_c" />
+          <geom type="mesh" mesh="link_3_v" group="2" contype="0" conaffinity="0" quat="2.05103e-10 1 0 0" />
+          <body name="R_link_4" pos="0.065 0 0" quat="0.707107 0.707107 0 0">
+            <inertial pos="-0.0240716 -0.0235632 -0.0366858" quat="0.759875 0.103862 -0.465331 0.441894" mass="0.849743" diaginertia="0.00419973 0.00389504 0.00186162" />
+            <joint name="R_joint_4" pos="0 0 0" axis="0 0 1" range="0 3.05" actuatorfrcrange="-111 111" damping="0.2" armature="0.1" />
+            <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_4_c" />
+            <geom type="mesh" mesh="link_4_v" group="2" contype="0" conaffinity="0" />
+            <body name="R_link_5" pos="-0.0528 -0.4554 -2.22991e-12" quat="0.707107 -0.707107 0 0">
+              <inertial pos="-0.00867148 0.03835 0.188626" quat="0.446674 0.0377876 -0.128743 0.884579" mass="1.2058" diaginertia="0.0219771 0.0218397 0.00233919" />
+              <joint name="R_joint_5" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+              <geom pos="0 0 -0.02162" quat="2.05103e-10 1 0 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_5_c" />
+              <geom type="mesh" mesh="link_5_v" group="2" contype="0" conaffinity="0" pos="0 0 -0.02162" quat="2.05103e-10 1 0 0" />
+              <body name="R_link_6" pos="-0.0122 0 0" quat="3.6087e-12 -3.60861e-12 -0.707107 -0.707107">
+                <inertial pos="0.0458972 0.0084858 -0.00782578" quat="0.0424626 0.6118 0.170922 0.771157" mass="0.847158" diaginertia="0.00444053 0.00440141 0.00272972" />
+                <joint name="R_joint_6" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+                <geom pos="0 0 0" quat="0 0 1 2.05103e-10" type="mesh" rgba="0.980392 0.980392 0.470588 1" mesh="link_6_c" />
+                <geom type="mesh" mesh="link_6_v" group="2" contype="0" conaffinity="0" quat="0 0 1 2.05103e-10" />
+                <body name="R_link_7" pos="0.087 -0.1169 0" quat="0.707107 -0.707107 0 0">
+                  <inertial pos="0.00117005 5.03192e-06 0.0151382" quat="0.499962 0.501129 -0.498877 0.500029" mass="0.233956" diaginertia="0.000240243 0.000142027 0.000134422" />
+                  <joint name="R_joint_7" pos="0 0 0" axis="0 0 1" range="-3.12 3.12" actuatorfrcrange="-54 54" damping="0.2" armature="0.1" />
+                  <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="link_7_c" />
+                  <geom type="mesh" mesh="link_7_v" group="2" contype="0" conaffinity="0" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <light pos="0 0 3.5" dir="0 0 -1" directional="true" diffuse="0.9 0.9 0.9" />
+    <camera name="head_camera" mode="targetbody" target="R_link_1" pos="0.4 -0.3 0.6" fovy="70"/>
+    <geom name="floor" type="plane" size="3 3 0.1" rgba="0.85 0.85 0.88 1" />
+    <geom name="platform" type="box" pos="0 0 1.130" size="0.175 0.190 0.350" rgba="0.72 0.74 0.78 1" />
+    <geom name="flange_L" type="cylinder" pos="0.0250 0.2150 1.2500" quat="0.7071 0.7071 0 0" size="0.06 0.025" rgba="0.45 0.47 0.50 1" />
+    <geom name="flange_R" type="cylinder" pos="0.0250 -0.2150 1.2500" quat="0.7071 -0.7071 0 0" size="0.06 0.025" rgba="0.45 0.47 0.50 1" />
+    <geom name="tabletop" type="box" pos="0.200 0 0.765" size="0.375 0.600 0.015" rgba="0.80 0.81 0.83 1" />
+    <geom name="worktable" type="box" pos="0.875 0 0.765" size="0.180 0.390 0.015" rgba="0.83 0.80 0.74 1" />
+    <geom name="wtleg_-1-1" type="box" pos="0.730 -0.355 0.375" size="0.02 0.02 0.375" rgba="0.55 0.52 0.46 1" />
+    <geom name="wtleg_-11" type="box" pos="0.730 0.355 0.375" size="0.02 0.02 0.375" rgba="0.55 0.52 0.46 1" />
+    <geom name="wtleg_1-1" type="box" pos="1.020 -0.355 0.375" size="0.02 0.02 0.375" rgba="0.55 0.52 0.46 1" />
+    <geom name="wtleg_11" type="box" pos="1.020 0.355 0.375" size="0.02 0.02 0.375" rgba="0.55 0.52 0.46 1" />
+    <geom name="leg_-1-1" type="box" pos="-0.135 -0.560 0.375" size="0.025 0.025 0.375" rgba="0.55 0.57 0.60 1" />
+    <geom name="leg_-11" type="box" pos="-0.135 0.560 0.375" size="0.025 0.025 0.375" rgba="0.55 0.57 0.60 1" />
+    <geom name="leg_1-1" type="box" pos="0.535 -0.560 0.375" size="0.025 0.025 0.375" rgba="0.55 0.57 0.60 1" />
+    <geom name="leg_11" type="box" pos="0.535 0.560 0.375" size="0.025 0.025 0.375" rgba="0.55 0.57 0.60 1" />
+  </worldbody>
+  <actuator>
+    <position name="L_joint_1" joint="L_joint_1" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="L_joint_2" joint="L_joint_2" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-1.57 1.57" />
+    <position name="L_joint_3" joint="L_joint_3" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="L_joint_4" joint="L_joint_4" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="0 3.05" />
+    <position name="L_joint_5" joint="L_joint_5" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="L_joint_6" joint="L_joint_6" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="L_joint_7" joint="L_joint_7" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="R_joint_1" joint="R_joint_1" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="R_joint_2" joint="R_joint_2" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-1.57 1.57" />
+    <position name="R_joint_3" joint="R_joint_3" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="R_joint_4" joint="R_joint_4" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="0 3.05" />
+    <position name="R_joint_5" joint="R_joint_5" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="R_joint_6" joint="R_joint_6" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+    <position name="R_joint_7" joint="R_joint_7" kp="1000" kv="40" forcerange="-150 150" ctrllimited="true" ctrlrange="-3.12 3.12" />
+  </actuator>
+  <keyframe>
+    <key name="home" qpos="0.000 0.200 0.000 1.500 0.000 0.500 0.000 0.000 0.200 0.000 1.500 0.000 0.500 0.000" />
+  </keyframe>
+  <option integrator="implicitfast" />
+  <contact>
+    <exclude body1="world" body2="L_link_1" />
+    <exclude body1="L_link_1" body2="L_link_2" />
+    <exclude body1="L_link_2" body2="L_link_3" />
+    <exclude body1="L_link_3" body2="L_link_4" />
+    <exclude body1="L_link_4" body2="L_link_5" />
+    <exclude body1="L_link_5" body2="L_link_6" />
+    <exclude body1="L_link_6" body2="L_link_7" />
+    <exclude body1="world" body2="R_link_1" />
+    <exclude body1="R_link_1" body2="R_link_2" />
+    <exclude body1="R_link_2" body2="R_link_3" />
+    <exclude body1="R_link_3" body2="R_link_4" />
+    <exclude body1="R_link_4" body2="R_link_5" />
+    <exclude body1="R_link_5" body2="R_link_6" />
+    <exclude body1="R_link_6" body2="R_link_7" />
+  </contact>
+  <sensor>
+    <force name="L_force" site="L_tool_mount" noise="0"/>
+    <torque name="L_torque" site="L_tool_mount" noise="0"/>
+    <force name="R_force" site="R_tool_mount" noise="0"/>
+    <torque name="R_torque" site="R_tool_mount" noise="0"/>
+  </sensor>
+</mujoco>
