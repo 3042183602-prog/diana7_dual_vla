@@ -11,6 +11,8 @@ DEFAULT_SCENE = Path(__file__).resolve().parent / "diana7_description" / "diana7
 xml = sys.argv[1] if len(sys.argv) > 1 else str(DEFAULT_SCENE)
 m = mujoco.MjModel.from_xml_path(xml)
 d = mujoco.MjData(m)
+if m.nkey:
+    mujoco.mj_resetDataKeyframe(m, d, 0)
 mujoco.mj_forward(m, d)
 print(f"场景: {xml}")
 print(f"加载 OK: {m.nq} 个自由度 / {m.nu} 个执行器;关闭窗口即退出")
